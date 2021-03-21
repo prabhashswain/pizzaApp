@@ -1,0 +1,20 @@
+<section class="form-container mt-4">
+    <form action="/login" method="POST"  class="form">
+        <div class="group">
+            <h3>User login</h3>
+        </div>
+        <% if(messages.error){ %>
+            <span class="text-red-500 text-sm"> <%= messages.error %> </span>
+          <% } %>
+        <div class="group">
+            <label for="email">Email </label>
+            <input type="text" name="email" id="email" placeholder="Email" class="control">
+        </div>
+        <div class="group">
+            <label for="password">Password </label>
+            <input type="password" name="password" id="password" placeholder="Password" class="control">
+        </div>
+        <button type="submit" class="btn py-3 px-8 mt-2 rounded-full flex items-center font-bold">Login</button>
+        <a href="/register">Create an account ?</a>
+    </form>
+</section>
